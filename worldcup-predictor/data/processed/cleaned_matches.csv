@@ -1,0 +1,21 @@
+date,home_team,away_team,home_score,away_score,tournament,city,country,neutral,result
+1990-06-13,Belgium,South Korea,1,0,FIFA World Cup,Verona,Italy,False,H
+1990-06-18,Argentina,Cameroon,0,1,FIFA World Cup,Nagoya,Japan,True,A
+1990-06-23,Italy,United States,2,0,FIFA World Cup,Rome,Italy,False,H
+1990-07-04,England,West Germany,1,1,FIFA World Cup,Turin,Italy,False,D
+1990-07-08,West Germany,Argentina,1,0,FIFA World Cup,Rome,Italy,False,H
+1994-06-18,United States,Switzerland,1,1,FIFA World Cup,Detroit,United States,False,D
+1994-06-28,Brazil,Sweden,1,1,FIFA World Cup,Detroit,United States,True,D
+1998-07-12,France,Brazil,3,0,FIFA World Cup,Paris,France,False,H
+2002-06-09,Costa Rica,Turkey,1,1,FIFA World Cup,Incheon,South Korea,True,D
+2002-06-30,Germany,Brazil,0,2,FIFA World Cup,Yokohama,Japan,True,A
+2006-07-09,Italy,France,1,1,FIFA World Cup,Berlin,Germany,True,D
+2010-06-16,Switzerland,Chile,0,1,FIFA World Cup,Port Elizabeth,South Africa,True,A
+2010-07-11,Netherlands,Spain,0,1,FIFA World Cup,Johannesburg,South Africa,True,A
+2014-06-13,Spain,Netherlands,1,5,FIFA World Cup,Salvador,Brazil,True,A
+2014-07-13,Germany,Argentina,1,0,FIFA World Cup,Rio de Janeiro,Brazil,True,H
+2018-06-27,South Korea,Germany,2,0,FIFA World Cup,Kazan,Russia,True,H
+2018-06-30,France,Argentina,4,3,FIFA World Cup,Kazan,Russia,False,H
+2018-07-15,France,Croatia,4,2,FIFA World Cup,Moscow,Russia,False,H
+2022-11-22,Argentina,Saudi Arabia,1,2,FIFA World Cup,Lusail,Qatar,True,A
+2022-12-18,Argentina,France,3,3,FIFA World Cup,Lusail,Qatar,True,D

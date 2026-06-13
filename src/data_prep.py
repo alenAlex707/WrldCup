@@ -3,7 +3,7 @@ import pandas as pd
 
 def main():
     # 1. Load raw data
-    df = pd.read_csv("../data/raw/results.csv")
+    df = pd.read_csv("data/raw/results.csv")
 
     # 2. Parse date and sort chronologically
     df["date"] = pd.to_datetime(df["date"])
@@ -27,7 +27,7 @@ def main():
     df["result"] = df.apply(classify_result, axis=1)
 
     # 6. Save cleaned data
-    df.to_csv("../data/processed/cleaned_matches.csv", index=False)
+    df.to_csv("data/processed/cleaned_matches.csv", index=False)
 
     # 7. Print summary
     print(f"Shape: {df.shape}")

@@ -4,7 +4,7 @@ import pandas as pd
 
 def main():
     # 1. Load cleaned data
-    df = pd.read_csv("../data/processed/cleaned_matches.csv")
+    df = pd.read_csv("data/processed/cleaned_matches.csv")
 
     # --- Pre-compute dataset-wide average goals per team per match ---
     total_goals = df["home_score"].sum() + df["away_score"].sum()
@@ -17,7 +17,6 @@ def main():
     elo_ratings = {}
 
     # --- Rolling form tracking ---
-    # Each team's recent match history: deque of (goals_scored, goals_conceded), maxlen=5
     team_history = defaultdict(lambda: deque(maxlen=5))
 
     # Lists to collect new columns
@@ -55,7 +54,6 @@ def main():
             home_form_gs_list.append(sum(gs) / len(gs))
             home_form_gc_list.append(sum(gc) / len(gc))
         else:
-            # Fill with dataset-wide average for teams with no prior matches
             home_form_gs_list.append(avg_goals_per_team_per_match)
             home_form_gc_list.append(avg_goals_per_team_per_match)
 
@@ -68,9 +66,7 @@ def main():
             away_form_gc_list.append(avg_goals_per_team_per_match)
 
         # --- Update team histories with THIS match (for future matches) ---
-        # home_team scored home_score, conceded away_score
         team_history[home].append((home_score, away_score))
-        # away_team scored away_score, conceded home_score
         team_history[away].append((away_score, home_score))
 
         # --- Elo update ---
@@ -84,7 +80,7 @@ def main():
         elif result == "D":
             S_home = 0.5
             S_away = 0.5
-        else:  # 'A'
+        else:
             S_home = 0.0
             S_away = 1.0
 
@@ -102,7 +98,7 @@ def main():
     df["away_form_goals_conceded"] = away_form_gc_list
 
     # --- Save to final_features.csv ---
-    df.to_csv("../data/processed/final_features.csv", index=False)
+    df.to_csv("data/processed/final_features.csv", index=False)
 
     # --- Print summary ---
     print("Column names:", list(df.columns), "\n")

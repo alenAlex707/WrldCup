@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, log_loss, classification_report, con
 
 def main():
     # 1. Load data
-    df = pd.read_csv("../data/processed/final_features.csv")
+    df = pd.read_csv("data/processed/final_features.csv")
 
     # 2. Feature columns
     feature_cols = [
@@ -48,7 +48,7 @@ def main():
     print(confusion_matrix(y_test, y_pred))
 
     # 7. Save model
-    joblib.dump(model, "../models/logistic_regression.pkl")
+    joblib.dump(model, "models/logistic_regression.pkl")
     print("\nModel saved to models/logistic_regression.pkl")
 
 
